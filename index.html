@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Go Green Cart</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #e8fdf5;
+    }
+
+    header {
+      background-color: #38b000;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .auth-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .auth-buttons button {
+      background-color: #f9c74f;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 5px;
+      font-weight: bold;
+      color: #1b4332;
+      cursor: pointer;
+    }
+
+    .banner {
+      background-image: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1470&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-shadow: 2px 2px #000;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 2rem;
+      color: #081c15;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      margin: 12px 0 5px;
+      font-size: 1.2rem;
+      color: #2d6a4f;
+    }
+
+    .card p {
+      color: #40916c;
+      font-weight: bold;
+    }
+
+    .add-btn {
+      background-color: #40916c;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    footer {
+      background-color: #081c15;
+      color: white;
+      text-align: center;
+      padding: 1.2rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .cart {
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Go Green Cart</h1>
+    <nav>
+      <a href="#veg">Vegetables</a>
+      <a href="#flowers">Flowers</a>
+      <span class="cart">🛒</span>
+      <div class="auth-buttons">
+        <button onclick="alert('Login clicked!')">Login</button>
+        <button onclick="alert('Sign Up clicked!')">Sign Up</button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="banner">
+    Fresh Organic Goodness 🍅🌼
+  </div>
+
+  <h2 class="section-title" id="veg">Vegetables</h2>
+  <div class="product-grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1467020323552-36f7bf0e30e6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG9tYXRvZXN8ZW58MHx8MHx8fDA%3D" alt="Tomato">
+      <h3>Tomatoes</h3>
+      <p>₹30/kg</p>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2Fycm90fGVufDB8fDB8fHww" alt="Carrot">
+      <h3>Carrots</h3>
+      <p>₹25/kg</p>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3BpbmFjaHxlbnwwfHwwfHx8MA%3D%3D" alt="Spinach">
+      <h3>Spinach</h3>
+      <p>₹20/bundle</p>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+  </div>
+
+  <h2 class="section-title" id="flowers">Flowers</h2>
+  <div class="product-grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1518709779341-56cf4535e94b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cm9zZXN8ZW58MHx8MHx8fDA%3D" alt="Roses">
+      <h3>Roses</h3>
+      <p>₹15/stick</p>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1695301737779-abb0802bf47c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWFyaWdvbGR8ZW58MHx8MHx8fDA%3D" alt="Marigold">
+      <h3>Marigold</h3>
+      <p>₹50/bundle</p>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1488928741225-2aaf732c96cc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHVsaXBzfGVufDB8fDB8fHww" alt="Tulips">
+      <h3>Tulips</h3>
+      <p>₹40/stick</p>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+  </div>
+
+  <footer>
+    Contact us: support@gogreencart.in | ☎️ +91 98765 43210 <br/>
+    © 2025 Go Green Cart. All rights reserved.
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll(".add-btn");
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        alert("Added to cart!");
+      });
+    });
+  </script>
+
+</body>
+</html>
